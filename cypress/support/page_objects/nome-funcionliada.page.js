@@ -1,7 +1,7 @@
 
 class Produto {
 
-    ecolherProduto(produto, tamanho, cor, quantidade) {
+    ecolherProdutos(produto, tamanho, cor, quantidade) {
         //ações do método
         cy.get('#primary-menu > .menu-item-629 > a').click()
         cy.get('[class="product-block grid"]').contains(produto).click()

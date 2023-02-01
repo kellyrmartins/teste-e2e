@@ -38,6 +38,5 @@ Cypress.Commands.add('checkoutt', (nome, sobrenome, pais, endereco, cidade, esta
     cy.get('#payment_method_bacs').should('be.visible').click()
     cy.get('#terms').should('be.visible').click()
     cy.get('#place_order').click()
-    cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
 
 })

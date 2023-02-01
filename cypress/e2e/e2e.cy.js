@@ -39,14 +39,13 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
         //TODO
-        Produto.ecolherProduto(
+        Produto.ecolherProdutos(
             dadosProdutos[0].produto,
             dadosProdutos[0].tamanho,
             dadosProdutos[0].cor,
             dadosProdutos[0].quantidade
         )
-        // cy.get('#primary-menu > .active > a').click()
-        Produto.ecolherProduto(
+        Produto.ecolherProdutos(
             dadosProdutos[1].produto,
             dadosProdutos[1].tamanho,
             dadosProdutos[1].cor,
@@ -59,5 +58,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             user.nome, user.sobrenome, 'Brasil', user.endereco, user.cidade, user.estado,
             user.cep, user.telefone, user.email
         )
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
+
     })
 })
